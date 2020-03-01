@@ -1,0 +1,1556 @@
+ID,Name
+0,Tree Head
+1,Medical
+2,Emotional
+3,People
+4,Environment/Room
+5,Basic needs
+6,Places
+7,Pain
+8,Nausea
+9,Medication
+10,Dizzy
+11,Short of breath
+12,Information
+13,Happy
+14,Sad
+15,Worried
+16,Angry
+17,Positive
+18,Negative
+19,Doctor
+20,Nurse
+21,Significant Other
+22,Family/Friends
+23,Chaplain/Priest
+24,Therapist
+25,Position/Bed
+26,Lights
+27,Window
+28,Temperature
+29,Items
+30,Room Curtain
+31,Hunger
+32,Thirst
+33,Temperature
+34,Position/Bed
+35,Pain
+36,Physical
+37,Work
+38,School
+39,Home
+40,Bank
+41,Store
+42,Church
+43,Level of pain
+259,[numerical scale]
+260,
+261,
+262,
+263,
+264,
+44,Location of pain
+265,[image of body]
+266,
+267,
+268,
+269,
+270,
+45,Pulsing
+271,
+272,
+273,
+274,
+275,
+276,
+46,Constant
+277,
+278,
+279,
+280,
+281,
+282,
+47,Sharp
+283,
+284,
+285,
+286,
+287,
+288,
+48,Dull
+289,
+290,
+291,
+292,
+293,
+294,
+49,Level of nausea
+295,[numerical scale]
+296,
+297,
+298,
+299,
+300,
+50,Medication
+301,To treat nausea
+302,Caused nausea
+303,
+304,
+305,
+306,
+51,Vomit
+307,
+308,
+309,
+310,
+311,
+312,
+52,Food
+313,Want more
+314,Want less
+315,
+316,
+317,
+318,
+53,Water
+319,Want more
+320,Want less
+321,Cold
+322,Hot
+323,IV fluids
+324,
+54,Stimulus
+325,Food
+326,Smell
+327,Light
+328,Noise
+329,TV/Radio
+330,Motion
+55,Pain
+331,Want more
+332,Want less
+333,Location of Pain
+334,Pulsing
+335,Constant 
+336,Sharp
+56,Sleep
+337,Want more
+338,Want less
+339,Blanket
+340,Pillow
+341,lights off
+342,close curtain
+57,Anxious
+343,Want more
+344,Want less
+345,call family/frineds
+346,Lonely
+347,
+348,
+58,Nausea
+349,To treat nausea
+350,Caused nausea
+351,
+352,
+353,
+354,
+59,Breathing
+355,want more
+356,oxygen
+357,suction
+358,
+359,
+360,
+60,Dose/Side effects
+361,Too much
+362,Too little
+363,Good
+364,Bad
+365,Unsure
+366,
+61,Level of dizziness
+367,[numerical scale]
+368,
+369,
+370,
+371,
+372,
+62,Medication
+373,want more
+374,want less
+375,want same
+376,
+377,
+378,
+63,Sleep
+379,Blanket
+380,Pillow
+381,Lights 
+382,TV/Radio/Music 
+383,Curtains
+384,call bell
+64,Lights
+385,On
+386,Off
+387,Too bright
+388,Too dim
+389,Blinds open
+390,Blinds closed
+65,Noise
+391,Too much
+392,Too little
+393,TV/Radio/Music off
+394,TV/Radio/Music on
+395,Alarm
+396,Voices
+66,Water
+397,Want more
+398,Want less
+399,Cold
+400,Hot
+401,IV fluids
+402,
+67,Suction
+403,
+404,
+405,
+406,
+407,
+408,
+68,Adjust tube
+409,
+410,
+411,
+412,
+413,
+414,
+69,Medication
+415,want more
+416,want less
+417,want same
+418,
+419,
+420,
+70,Adjust blanket
+421,
+422,
+423,
+424,
+425,
+426,
+71,Pressure
+427,Level [numerical scale]
+428,Location [image of body]
+429,
+430,
+431,
+432,
+72,Temperature
+433,Hot
+434,Cold
+435,Humid
+436,Dry
+437,Blanket
+438,Clothes
+73,Form
+439,Fill in
+440,Change
+441,Lost
+442,Missing
+443,Contact info
+444,History
+74,History
+445,Check
+446,Forgot
+447,Better
+448,Worse
+449,When
+450,Doctor
+75,Procedure
+451,What
+452,When
+453,Why
+454,Who
+455,Where
+456,Contact Family/friends
+76,Forgot
+457,Date/Time
+458,Nurse/Doctor
+459,Daily doctor update
+460,Medication
+461,
+462,
+77,Confused/Worried/Ask/Contact
+463,Significant Other
+464,Friends
+465,Children
+466,Parents
+467,Boss
+468,Workers
+78,Coverage
+469,Insurance
+470,
+471,
+472,
+473,
+474,
+79,Gratitude
+475,Doctor
+476,Nurse
+477,Family 
+478,Friends
+479,God
+480,other
+80,Family/Friend
+481,
+482,
+483,
+484,
+485,
+486,
+81,Home/Work
+487,Significant Other
+488,Family/Friends
+489,Pet
+490,Boss
+491,Coworker
+492,Employee/Client
+82,Medical/Procedure
+493,Better
+494,Worse
+495,Pain
+496,Medication
+497,Monitors/Devices
+498,Doctor/Family/Friends
+83,Memory
+499,
+500,
+501,
+502,
+503,
+504,
+84,Pray
+505,Quiet
+506,Bible
+507,Read
+508,Google search
+509,Music
+510,
+85,Need reassurance
+511,
+512,
+513,
+514,
+515,
+516,
+86,Medical/Procedure
+517,Better
+518,Worse
+519,Pain
+520,Medication
+521,Monitors/Devices
+522,Doctor/Family/Friends
+87,Family/Friend
+523,
+524,
+525,
+526,
+527,
+528,
+88,Home/Work
+529,Significant Other
+530,Family/Friends
+531,Pet
+532,Boss
+533,Coworker
+534,Employee/Client
+89,Diagnosis
+535,
+536,
+537,
+538,
+539,
+540,
+90,Pray
+541,Quiet
+542,Bible
+543,Read
+544,Google search
+545,Music
+546,
+91,Need reassurance
+547,
+548,
+549,
+550,
+551,
+552,
+92,Medical/Procedure
+553,Better
+554,Worse
+555,Pain
+556,Medication
+557,Monitors/Devices
+558,Doctor/Family/Friends
+93,Family/Friend
+559,
+560,
+561,
+562,
+563,
+564,
+94,Home/Work
+565,Significant Other
+566,Family/Friends
+567,Pet
+568,Boss
+569,Coworker
+570,Employee/Client
+95,Diagnosis
+571,
+572,
+573,
+574,
+575,
+576,
+96,School
+577,
+578,
+579,
+580,
+581,
+582,
+97,Medical/Procedure
+583,Better
+584,Worse
+585,Pain
+586,Medication
+587,Monitors/Devices
+588,Doctor/Family/Friends
+98,Home/Work
+589,Significant Other
+590,Family/Friends
+591,Pet
+592,Boss
+593,Coworker
+594,Employee/Client
+99,Family/Friend
+595,
+596,
+597,
+598,
+599,
+600,
+100,Doctor
+601,
+602,
+603,
+604,
+605,
+606,
+101,Nurse
+607,
+608,
+609,
+610,
+611,
+612,
+102,Myself
+613,
+614,
+615,
+616,
+617,
+618,
+103,Excited
+619,[numerical scale]
+620,Family/Friend
+621,Home/Work
+622,Medical/Procedure
+623,Doctor/Nurse
+624,Chaplian/Therapist
+104,Grateful
+625,[numerical scale]
+626,Family/Friend
+627,Home/Work
+628,Medical/Procedure
+629,Doctor/Nurse
+630,Chaplian/Therapist
+105,Amused
+631,[numerical scale]
+632,Family/Friend
+633,Home/Work
+634,Medical/Procedure
+635,Doctor/Nurse
+636,Chaplian/Therapist
+106,Love
+637,[numerical scale]
+638,Family/Friend
+639,Home/Work
+640,Medical/Procedure
+641,Doctor/Nurse
+642,Chaplian/Therapist
+107,Hope
+643,[numerical scale]
+644,Family/Friend
+645,Home/Work
+646,Medical/Procedure
+647,Doctor/Nurse
+648,Chaplian/Therapist
+108,Prayer
+649,Chaplain/Priest
+650,Family/Friend
+651,Home/Work
+652,Medical/Procedure
+653,Doctor/Nurse
+654,Bible/Religious book
+109,Fear
+655,[numerical scale]
+656,Family/Friend
+657,Home/Work
+658,Medical/Procedure
+659,Doctor/Nurse
+660,Chaplian/Therapist
+110,Frustrated
+661,[numerical scale]
+662,Family/Friend
+663,Home/Work
+664,Medical/Procedure
+665,Doctor/Nurse
+666,Chaplian/Therapist
+111,Confused
+667,[numerical scale]
+668,Family/Friend
+669,Home/Work
+670,Medical/Procedure
+671,Doctor/Nurse
+672,Chaplian/Therapist
+112,Anxious
+673,[numerical scale]
+674,Family/Friend
+675,Home/Work
+676,Medical/Procedure
+677,Doctor/Nurse
+678,Chaplian/Therapist
+113,Stressed
+679,[numerical scale]
+680,Family/Friend
+681,Home/Work
+682,Medical/Procedure
+683,Doctor/Nurse
+684,Chaplian/Therapist
+114,Lonely
+685,[numerical scale]
+686,Family/Friend
+687,Home/Work
+688,Medical/Procedure
+689,Doctor/Nurse
+690,Chaplian/Therapist
+115,Help...
+691,
+692,
+693,
+694,
+695,
+696,
+116,Tell...
+697,
+698,
+699,
+700,
+701,
+702,
+117,Thank...
+703,
+704,
+705,
+706,
+707,
+708,
+118,Where...
+709,
+710,
+711,
+712,
+713,
+714,
+119,When...
+715,
+716,
+717,
+718,
+719,
+720,
+120,What...
+721,Procedure
+722,Diagnosis
+723,
+724,
+725,
+726,
+121,Help...
+727,
+728,
+729,
+730,
+731,
+732,
+122,Tell...
+733,
+734,
+735,
+736,
+737,
+738,
+123,Thank...
+739,
+740,
+741,
+742,
+743,
+744,
+124,Medication
+745,
+746,
+747,
+748,
+749,
+750,
+125,Position/Physical
+751,
+752,
+753,
+754,
+755,
+756,
+126,Environment/Room
+757,
+758,
+759,
+760,
+761,
+762,
+127,Want
+763,
+764,
+765,
+766,
+767,
+768,
+128,How...
+769,
+770,
+771,
+772,
+773,
+774,
+129,Where...
+775,
+776,
+777,
+778,
+779,
+780,
+130,When...
+781,
+782,
+783,
+784,
+785,
+786,
+131,Why...
+787,
+788,
+789,
+790,
+791,
+792,
+132,Tell...
+793,
+794,
+795,
+796,
+797,
+798,
+133,Significant Other
+799,Want
+800,How?
+801,Where?
+802,When?
+803,Why?
+804,Tell...
+134,Children
+805,Want
+806,How?
+807,Where?
+808,When?
+809,Why?
+810,Tell...
+135,Parents
+811,Want
+812,How?
+813,Where?
+814,When?
+815,Why?
+816,Tell...
+136,Siblings
+817,Want
+818,How?
+819,Where?
+820,When?
+821,Why?
+822,Tell...
+137,Friend
+823,Want
+824,How?
+825,Where?
+826,When?
+827,Why?
+828,Tell...
+138,Contact...
+829,
+830,
+831,
+832,
+833,
+834,
+139,Contact
+835,
+836,
+837,
+838,
+839,
+840,
+140,Bible/Religious book
+841,Read
+842,Look up...
+843,
+844,
+845,
+846,
+141,Music
+847,Play
+848,Radio
+849,
+850,
+851,
+852,
+142,Lights
+853,On
+854,Off
+855,Too bright
+856,Too dim
+857,Blinds open
+858,Blinds closed
+143,Pray
+859,Quiet
+860,Bible
+861,Read
+862,Google search
+863,Music
+864,
+144,Family/Friends
+865,
+866,
+867,
+868,
+869,
+870,
+145,Physical therapist
+871,Want
+872,How?
+873,Where?
+874,When?
+875,Why?
+876,Tell...
+146,Emotional therapist
+877,Want
+878,How?
+879,Where?
+880,When?
+881,Why?
+882,Tell...
+147,Chaplain/Priest
+883,Want
+884,How?
+885,Where?
+886,When?
+887,Why?
+888,Tell...
+148,Occupational therapist
+889,Want
+890,How?
+891,Where?
+892,When?
+893,Why?
+894,Tell...
+149,Family/Friends
+895,
+896,
+897,
+898,
+899,
+900,
+150,Psychiatrist
+901,Want
+902,How?
+903,Where?
+904,When?
+905,Why?
+906,Tell...
+151,Roll over
+907,To left side
+908,To right side
+909,On back
+910,On front
+911,
+912,
+152,Sit up
+913,In bed
+914,On chair
+915,Watch TV
+916,Read book
+917,Neck/Head
+918,Back
+153,Adjust bed up
+919,
+920,
+921,
+922,
+923,
+924,
+154,Adjust bed down
+925,
+926,
+927,
+928,
+929,
+930,
+155,Pillow
+931,More
+932,Less
+933,Too soft
+934,Too hard
+935,Change
+936,Itchy
+156,Blanket
+937,On
+938,Off
+939,Hot
+940,Cold
+941,Itchy
+942,
+157,On
+943,
+944,
+945,
+946,
+947,
+948,
+158,Off
+949,
+950,
+951,
+952,
+953,
+954,
+159,Too bright
+955,
+956,
+957,
+958,
+959,
+960,
+160,Too dim
+961,
+962,
+963,
+964,
+965,
+966,
+161,Blinds open
+967,
+968,
+969,
+970,
+971,
+972,
+162,Blinds closed
+973,
+974,
+975,
+976,
+977,
+978,
+163,Open
+979,
+980,
+981,
+982,
+983,
+984,
+164,Close
+985,
+986,
+987,
+988,
+989,
+990,
+165,Blinds open
+991,
+992,
+993,
+994,
+995,
+996,
+166,Blinds closed
+997,
+998,
+999,
+1000,
+1001,
+1002,
+167,
+1003,
+1004,
+1005,
+1006,
+1007,
+1008,
+168,
+1009,
+1010,
+1011,
+1012,
+1013,
+1014,
+169,Hot
+1015,Too much
+1016,Too little
+1017,
+1018,
+1019,
+1020,
+170,Cold
+1021,Too much
+1022,Too little
+1023,
+1024,
+1025,
+1026,
+171,Humid
+1027,Too much
+1028,Too little
+1029,
+1030,
+1031,
+1032,
+172,Dry
+1033,Too much
+1034,Too little
+1035,
+1036,
+1037,
+1038,
+173,Blanket
+1039,On
+1040,Off
+1041,Hot
+1042,Cold
+1043,Itchy
+1044,
+174,Clothes
+1045,More
+1046,Less
+1047,Too thin
+1048,Too thick
+1049,Itchy
+1050,Change
+175,Glasses
+1051,Put on
+1052,Take off
+1053,Contacts
+1054,Reading
+1055,Clean
+1056,
+176,Dentures
+1057,Put on
+1058,Take off
+1059,Clean
+1060,
+1061,
+1062,
+177,Phone
+1063,Want
+1064,Check
+1065,Charge
+1066,Turn off
+1067,Read messages
+1068,Call
+178,Wallet
+1069,Card
+1070,Cash
+1071,Write cheque
+1072,
+1073,
+1074,
+179,TV/Radio
+1075,On
+1076,Off
+1077,Change channel/station
+1078,Too loud
+1079,Too quiet
+1080,Too bright screen
+180,Keys
+1081,Want
+1082,Give to...
+1083,Where?
+1084,
+1085,
+1086,
+181,Open
+1087,
+1088,
+1089,
+1090,
+1091,
+1092,
+182,Close
+1093,
+1094,
+1095,
+1096,
+1097,
+1098,
+183,Half open
+1099,
+1100,
+1101,
+1102,
+1103,
+1104,
+184,Light
+1105,Too much
+1106,Too little
+1107,
+1108,
+1109,
+1110,
+185,Noise
+1111,Too much
+1112,Too little
+1113,TV/Radio/Music off
+1114,TV/Radio/Music on
+1115,Alarm
+1116,Voices
+186,
+1117,
+1118,
+1119,
+1120,
+1121,
+1122,
+187,Level of hunger
+1123,[numerical scale]
+1124,
+1125,
+1126,
+1127,
+1128,
+188,Food
+1129,Sweet
+1130,Savoury
+1131,
+1132,
+1133,
+1134,
+189,Nausea
+1135,Want more food
+1136,Want less food
+1137,Allergy/sensitivity
+1138,Smell
+1139,Craving
+1140,
+190,Home-cooked
+1141,Want
+1142,Miss
+1143,Smell/Taste
+1144,Contact...
+1145,
+1146,
+191,Cravings
+1147,Sweet
+1148,Savoury
+1149,Salty
+1150,Sour
+1151,Bitter
+1152,Umami
+192,Sensitivities
+1153,Allergy
+1154,Stomach ache
+1155,Nausea
+1156,Diarrhea
+1157,Constipation
+1158,Smell
+193,Level of thirst
+1159,[numerical scale]
+1160,
+1161,
+1162,
+1163,
+1164,
+194,Water
+1165,Want more
+1166,Want less
+1167,Cold
+1168,Hot
+1169,IV fluids
+1170,
+195,Drinks
+1171,Hot
+1172,Cold
+1173,
+1174,
+1175,
+1176,
+196,Dry throat
+1177,Itchy
+1178,Pain
+1179,Constricted
+1180,Medication
+1181,Temperature
+1182,
+197,
+1183,
+1184,
+1185,
+1186,
+1187,
+1188,
+198,
+1189,
+1190,
+1191,
+1192,
+1193,
+1194,
+199,Hot
+1195,
+1196,
+1197,
+1198,
+1199,
+1200,
+200,Cold
+1201,
+1202,
+1203,
+1204,
+1205,
+1206,
+201,Sweaty
+1207,
+1208,
+1209,
+1210,
+1211,
+1212,
+202,Blanket
+1213,On
+1214,Off
+1215,Hot
+1216,Cold
+1217,Itchy
+1218,
+203,Clothes
+1219,More
+1220,Less
+1221,Too thin
+1222,Too thick
+1223,Itchy
+1224,Change
+204,Humidity
+1225,Too humid
+1226,Too dry
+1227,Sweaty
+1228,Dry mouth
+1229,Trouble breathing
+1230,Thirsty
+205,Roll over
+1231,To left side
+1232,To right side
+1233,On back
+1234,On front
+1235,
+1236,
+206,Sit up
+1237,In bed
+1238,On chair
+1239,Watch TV
+1240,Read book
+1241,Neck/Head
+1242,Back
+207,Adjust bed up
+1243,
+1244,
+1245,
+1246,
+1247,
+1248,
+208,Adjust bed down
+1249,
+1250,
+1251,
+1252,
+1253,
+1254,
+209,Pillow
+1255,More
+1256,Less
+1257,Too soft
+1258,Too hard
+1259,Change
+1260,Itchy
+210,Blanket
+1261,On
+1262,Off
+1263,Hot
+1264,Cold
+1265,Itchy
+1266,
+211,Level of pain
+1267,[numerical scale]
+1268,
+1269,
+1270,
+1271,
+1272,
+212,Location of pain
+1273,[image of body]
+1274,
+1275,
+1276,
+1277,
+1278,
+213,Pulsing
+1279,
+1280,
+1281,
+1282,
+1283,
+1284,
+214,Constant
+1285,
+1286,
+1287,
+1288,
+1289,
+1290,
+215,Sharp
+1291,
+1292,
+1293,
+1294,
+1295,
+1296,
+216,Dull
+1297,
+1298,
+1299,
+1300,
+1301,
+1302,
+217,Help me with...
+1303,Pain
+1304,Sitting
+1305,Walking
+1306,Eating/Drinking
+1307,Toilet
+1308,Bathing
+218,Toilet
+1309,Urination
+1310,Defecation
+1311,Change sheets
+1312,Change diaper
+1313,Sores/rash
+1314,Uncomfortable
+219,Brush teeth
+1315,
+1316,
+1317,
+1318,
+1319,
+1320,
+220,Wash
+1321,Hands
+1322,Face
+1323,Body
+1324,Sheets
+1325,
+1326,
+221,Change sheets
+1327,
+1328,
+1329,
+1330,
+1331,
+1332,
+222,Massage
+1333,
+1334,
+1335,
+1336,
+1337,
+1338,
+223,Boss
+1339,Contact
+1340,Pay
+1341,Insurance
+1342,Worried
+1343,Tell...
+1344,Ask...
+224,Coworker
+1345,Contact
+1346,Pay
+1347,Insurance
+1348,Worried
+1349,Tell...
+1350,Ask...
+225,Employee
+1351,Contact
+1352,Pay
+1353,Insurance
+1354,Worried
+1355,Tell...
+1356,Ask...
+226,Email...
+1357,Boss
+1358,Coworker
+1359,Employee
+1360,Client
+1361,
+1362,
+227,Finances
+1363,Pay
+1364,Withdraw/deposit
+1365,Amount
+1366,Documents
+1367,Coverage
+1368,Contact...
+228,Insurance
+1369,Pay
+1370,Amount
+1371,Documents
+1372,Coverage
+1373,Contact...
+1374,
+229,Tuition/Fees
+1375,Pay
+1376,Amount
+1377,Contact...
+1378,
+1379,
+1380,
+230,Children
+1381,Tell...
+1382,What?
+1383,Where?
+1384,When?
+1385,Why?
+1386,How?
+231,Teacher
+1387,Tell...
+1388,What?
+1389,Where?
+1390,When?
+1391,Why?
+1392,How?
+232,Study
+1393,Test/quiz
+1394,Exam
+1395,Notes
+1396,Textbook
+1397,
+1398,
+233,Grades
+1399,What are they?
+1400,Pass
+1401,Fail
+1402,High
+1403,Low
+1404,
+234,
+1405,
+1406,
+1407,
+1408,
+1409,
+1410,
+235,Family
+1411,where
+1412,when
+1413,call
+1414,miss
+1415,
+1416,
+236,Significant Other
+1417,Want
+1418,How?
+1419,Where?
+1420,When?
+1421,Why?
+1422,Tell...
+237,Finances
+1423,Bill
+1424,Mortage
+1425,Repair
+1426,
+1427,
+1428,
+238,Item
+1429,Phone
+1430,Wallet
+1431,Keys
+1432,Clothing
+1433,
+1434,
+239,Pet
+1435,Feed
+1436,Walk
+1437,Let out
+1438,Put in cage
+1439,Vet
+1440,Give medicine
+240,
+1441,
+1442,
+1443,
+1444,
+1445,
+1446,
+241,Bills
+1447,House
+1448,Car
+1449,Groceries
+1450,
+1451,
+1452,
+242,Mortgage
+1453,check
+1454,call family/friend
+1455,worried
+1456,
+1457,
+1458,
+243,Paycheck
+1459,Deposit
+1460,Pick up
+1461,Write cheque
+1462,Amount
+1463,Where?
+1464,When?
+244,Insurance
+1465,Health
+1466,Home
+1467,Travel
+1468,Car
+1469,Work
+1470,Life
+245,Other fees
+1471,Mechanic
+1472,Groceries
+1473,Re-imbursement
+1474,Write cheque
+1475,
+1476,
+246,Wallet
+1477,Where?
+1478,Card
+1479,Cash
+1480,Write cheque
+1481,
+1482,
+247,Grocery
+1483,Fruits/Vegetables
+1484,Dairy
+1485,Meat
+1486,Grains
+1487,Sweets
+1488,Bakery
+248,Pharmacy
+1489,Order
+1490,Pick up
+1491,Pay
+1492,Call/Ask
+1493,Coverage
+1494,Amount
+249,Mall
+1495,Clothes
+1496,Shoes
+1497,Accessories
+1498,
+1499,
+1500,
+250,Library
+1501,Take out book
+1502,Return book
+1503,Look up...
+1504,
+1505,
+1506,
+251,Pet store
+1507,Food
+1508,Vet
+1509,Medicine
+1510,
+1511,
+1512,
+252,
+1513,
+1514,
+1515,
+1516,
+1517,
+1518,
+253,Priest
+1519,Want
+1520,How...
+1521,Where...
+1522,When...
+1523,Why...
+1524,Tell...
+254,Chaplain
+1525,Want
+1526,How...
+1527,Where...
+1528,When...
+1529,Why...
+1530,Tell...
+255,Family/Friend
+1531,Want
+1532,How...
+1533,Where...
+1534,When...
+1535,Why...
+1536,Tell...
+256,Bible/Religious book
+1537,Read
+1538,Look up...
+1539,
+1540,
+1541,
+1542,
+257,Pray
+1543,call chaplin
+1544,call family/friend
+1545,Bible
+1546,Read
+1547,Music
+1548,Google search
+258,Music
+1549,Play
+1550,Stop
+1551,Radio
+1552,
+1553,
+1554,

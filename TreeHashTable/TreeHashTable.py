@@ -1,7 +1,7 @@
 import csv
 from collections import defaultdict
 MAX_CHILDREN = 6
-CSV_COLUMNS = ['Level', 'Parent', 'Child 1', 'Child 2',	'Child 3', 'Child 4', 'Child 5', 'Child 6']
+CSV_COLUMNS = ['Parent', 'Child 1', 'Child 2',	'Child 3', 'Child 4', 'Child 5', 'Child 6']
 HASH_OUTPUT_COLUMNS = ['ID', 'Name']
 
 def CSVtoHash(newHash):
@@ -13,11 +13,11 @@ def CSVtoHash(newHash):
             hash = {}
             i = 0
             for row in reader:
-                hash[i] = row[CSV_COLUMNS[1]]
-                if row[CSV_COLUMNS[0]] == '4':
-                    childIds = getChildIds(i)
-                    for j in range(MAX_CHILDREN):
-                        hash[childIds[j]] = row[CSV_COLUMNS[j + 2]]
+                hash[i] = row[CSV_COLUMNS[0]]
+                childIds = getChildIds(i)
+                print (childIds, " >>> ", i)
+                for j in range(MAX_CHILDREN):
+                    hash[childIds[j]] = row[CSV_COLUMNS[j + 1]]
                 i = i + 1
     else:
         filename = 'Hash.csv'
@@ -25,7 +25,7 @@ def CSVtoHash(newHash):
             reader = csv.DictReader(csvfile)
             hash = {}
             for row in reader:
-                print(row)
+               # print(row)
                 hash[row[HASH_OUTPUT_COLUMNS[0]]] = row[HASH_OUTPUT_COLUMNS[1]]
     return hash
 

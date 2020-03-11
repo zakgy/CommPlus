@@ -65,12 +65,16 @@ def create_java (tree, parent):
                 dest = '0';
             text += '\n\t\tbutton_' + str(child) + ' = (Button) view.findViewById(R.id.button' + str(child) + ');';
             text += '\n\t\tbutton_' + str(child) + '.setOnClickListener(new View.OnClickListener() {';
-            text += '\n\t\t\tpublic void onClick(View v) {'
+            text += '\n\t\t\tpublic void onClick(View v) {';
+            text += '\n\t\t\t\tMainActivity main_activity = (MainActivity) getActivity();';
+            text += '\n\t\t\t\tString button_text = button_' + str(child) + '.getText().toString();';
+            text += '\n\t\t\t\tmain_activity.update_sentence_bar(button_text);'
+            text += '\n';
             text += '\n\t\t\t\tFragmentTransaction ft = getFragmentManager().beginTransaction();';
             text += '\n\t\t\t\tft.replace(R.id.fragment_container, new fragment' + dest + '());';
             text += '\n\t\t\t\tft.addToBackStack(null);';
             text += '\n\t\t\t\tft.commit();';
-            text += '\n\t\t\t}\n\t\t});'
+            text += '\n\t\t\t}\n\t\t});';
 
     text += '\n\n\t\t return view;\n\t}\n}';
     return text;
@@ -110,16 +114,7 @@ def test(arg):
         return;
     print(create_xml(tree, 0));
     print(create_java(tree, 0));
-
-### INSTRUCTIONS TO RUN ##########################
-# To generate code:
-#   code_gen.py write
-# To test what a generated xml will look like:
-#   code_gen.py xml
-# To test what a generated java will look like:
-#   code_gen.py java
-##################################################
-
+    
 if len(sys.argv) > 1:
     if sys.argv[1] == 'write':
         main();

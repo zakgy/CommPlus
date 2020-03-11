@@ -1,23 +1,42 @@
-class Fragment:
-    def __init__ (self, name, level, buttons):
-        self.name = name;
-        self.level = level;
-        self.buttons = buttons;
-        
-pages = [];
-pages.append(Fragment("Main", 0, ["Medical", "Social", "Emotional"]));
-pages.append(Fragment("Social", 1, ["Work", "Family", "Friends", "Finance"]));
+import sys
+from TreeHashTable import getChildIds, getChildNames, CSVtoHash;
 
+def childExists(tree, child):
+    if child >= len(tree):
+        return 0;
+    if tree[child] == '':
+        return 0;
+    return 1;
+
+def hasChildren(tree, parent):
+    children = getChildIds(parent);
+    for child in children:
+        if childExists(tree, child):
+            return 1;
+    return 0;
 
 xml_relative_layout = '<?xml version="1.0" encoding="utf-8"?>\n<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"\n\txmlns:tools="http://schemas.android.com/tools"\n\tandroid:layout_width="match_parent"\n\tandroid:layout_height="match_parent" >\n';
 
 ## xml file generation
-def create_xml (f):
+def create_xml (tree, parent):
+    children = getChildIds(parent);
+    
     text = xml_relative_layout;
-    text += '\t<LinearLayout\n\t\tandroid:layout_width="match_parent"\n\t\tandroid:layout_height="match_parent"\n\t\tandroid:layout_weight="1"\n\t\tandroid:orientation="horizontal"\n\t\tandroid:weightSum="' + str(len(f.buttons)) + '" >\n';
+    text += '\t<LinearLayout\n\t\tandroid:layout_width="match_parent"';
+    text += '\n\t\tandroid:layout_height="match_parent"';
+    text += '\n\t\tandroid:layout_weight="1"';
+    text += '\n\t\tandroid:orientation="horizontal"';
+    text += '\n\t\tandroid:weightSum="' + str(len(children)) + '" >\n';
 
-    for button in f.buttons:
-        text += '\t\t<Button\n\t\t\tandroid:id="@+id/' + button.lower() + '"\n\t\t\tandroid:layout_width="0dp"\n\t\t\tandroid:layout_height="match_parent"\n\t\t\tandroid:layout_weight="1"\n\t\t\tandroid:scaleType="fitCenter"\n\t\t\tandroid:text="' + button + '" />\n';
+    for child in children:
+        if childExists(tree, child):
+            text += '\t\t<Button'
+            text += '\n\t\t\tandroid:id="@+id/button' + str(child);
+            text += '"\n\t\t\tandroid:layout_width="0dp"';
+            text += '\n\t\t\tandroid:layout_height="match_parent"';
+            text += '\n\t\t\tandroid:layout_weight="1"';
+            text += '\n\t\t\tandroid:scaleType="fitCenter"';
+            text += '\n\t\t\tandroid:text="' + tree[child] + '" />\n';
 
     text += '\t</LinearLayout>\n';
     text += '</RelativeLayout>';
@@ -26,40 +45,85 @@ def create_xml (f):
 java_imports = 'package com.example.commplus;\n\nimport android.app.Fragment;\nimport android.app.FragmentTransaction;\nimport android.os.Bundle;\nimport android.view.LayoutInflater;\nimport android.view.View;\nimport android.view.ViewGroup;\nimport android.widget.Button;';
 
 ## java file generation
-def create_java (f):
+def create_java (tree, parent):
+    children = getChildIds(parent);
+    
     text = java_imports;
-    text += '\n\npublic class fragment' + f.name + ' extends Fragment {';
+    text += '\n\npublic class fragment' + str(parent) + ' extends Fragment {';
     text += '\n\tView view;\n';
     
-    for button in f.buttons:
-        text += '\n\tButton ' + button.lower() + '_button;';
+    for child in children:
+        text += '\n\tButton button_' + str(child) + ';';
         
     text += '\n\t@Override\n\tpublic View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {';
-    text += '\n\t\tview = inflater.inflate(R.layout.fragment_' + f.name.lower() + ', container, false);\n';
+    text += '\n\t\tview = inflater.inflate(R.layout.fragment_' + str(parent) + ', container, false);\n';
 
-    for button in f.buttons:
-        text += '\n\t\t' + button.lower() + '_button = (Button) view.findViewById(R.id.' + button.lower() + ');';
-        text += '\n\t\t' + button.lower() + '_button.setOnClickListener(new View.OnClickListener() {';
-        text += '\n\t\t\tpublic void onClick(View v) {'
-        text += '\n\t\t\t\tFragmentTransaction ft = getFragmentManager().beginTransaction();';
-        text += '\n\t\t\t\tft.replace(R.id.fragment_container, new fragment' + button + '());';
-        text += '\n\t\t\t\tft.addToBackStack(null);';
-        text += '\n\t\t\t\tft.commit();';
-        text += '\n\t\t\t}\n\t\t});'
+    for child in children:
+        if childExists(tree, child):
+            dest = str(child);
+            if not hasChildren(tree,child):
+                dest = '0';
+            text += '\n\t\tbutton_' + str(child) + ' = (Button) view.findViewById(R.id.button' + str(child) + ');';
+            text += '\n\t\tbutton_' + str(child) + '.setOnClickListener(new View.OnClickListener() {';
+            text += '\n\t\t\tpublic void onClick(View v) {'
+            text += '\n\t\t\t\tFragmentTransaction ft = getFragmentManager().beginTransaction();';
+            text += '\n\t\t\t\tft.replace(R.id.fragment_container, new fragment' + dest + '());';
+            text += '\n\t\t\t\tft.addToBackStack(null);';
+            text += '\n\t\t\t\tft.commit();';
+            text += '\n\t\t\t}\n\t\t});'
 
     text += '\n\n\t\t return view;\n\t}\n}';
     return text;
 
-## generate xml files for all fragments
-for page in pages:
-    filename = "layouts/fragment_" + page.name.lower() + ".xml";
-    file = open(filename, "w");
-    file.write(create_xml(page));
-    file.close();
+def main():
+    tree = CSVtoHash(1);
 
-## generate java files for all fragments
-for page in pages:
-    filename = "java/fragment" + page.name + ".java";
-    file = open(filename, "w");
-    file.write(create_java(page));
-    file.close();
+    n_fragments = len(tree);
+    print('Generating code for ' + str(n_fragments) + ' fragments...');
+    
+    print('\tGenerating XML files...');
+    for fragment in range(n_fragments):
+        if childExists(tree, fragment):
+            if hasChildren(tree, fragment):
+                filename = "layouts/fragment_" + str(fragment) + ".xml";
+                file = open(filename, "w");
+                file.write(create_xml(tree, fragment));
+                file.close();
+
+    print('\tGenerating Java files...');
+    for fragment in range(n_fragments):
+        if childExists(tree, fragment):
+            if hasChildren(tree, fragment):
+                filename = "java/fragment" + str(fragment) + ".java";
+                file = open(filename, "w");
+                file.write(create_java(tree, fragment));
+                file.close();
+    return;
+
+def test(arg):
+    tree = CSVtoHash(1);
+    if arg == 'xml':
+        print(create_xml(tree, 0));
+        return;
+    if arg == 'java':
+        print(create_java(tree, 0));
+        return;
+    print(create_xml(tree, 0));
+    print(create_java(tree, 0));
+
+### INSTRUCTIONS TO RUN ##########################
+# To generate code:
+#   code_gen.py write
+# To test what a generated xml will look like:
+#   code_gen.py xml
+# To test what a generated java will look like:
+#   code_gen.py java
+##################################################
+
+if len(sys.argv) > 1:
+    if sys.argv[1] == 'write':
+        main();
+    else:
+        test(sys.argv[1]);
+else:
+    test('');

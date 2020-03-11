@@ -13,38 +13,12 @@
         android:layout_weight="1"
         android:scaleType="fitCenter"
         android:gravity="center"
-        android:text="Sentence" />
+        android:text="@string/default_sentence" />
 
-    <LinearLayout
+    <FrameLayout
+        android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        android:weightSum="3" >
+        android:layout_weight="1" />
 
-        <Button
-            android:id="@+id/functional"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:scaleType="fitCenter"
-            android:text="Functional" />
-
-        <Button
-            android:id="@+id/social"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:scaleType="fitCenter"
-            android:text="Social"
-            android:onClick="buttonClickSocial"/>
-
-        <Button
-            android:id="@+id/emotional"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:scaleType="fitCenter"
-            android:text="Emotional" />
-    </LinearLayout>
 </LinearLayout>

@@ -1,11 +1,10 @@
 package com.example.commplus;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.EditText;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,10 +12,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Begin the transaction
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        // Add the contents of the container with the new fragment
+        ft.add(R.id.fragment_container, new fragment0());
+        // Complete the changes added above
+        ft.commit();
     }
 
-    public void buttonClickSocial (View view) {
-        Intent intent = new Intent(this, Social.class);
-        startActivity(intent);
-    }
+//    private void loadFragment(Fragment fragment) {
+//        // create a FragmentManager
+//        FragmentManager fm = getFragmentManager();
+//        // create a FragmentTransaction to begin the transaction and replace the Fragment
+//        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+//        // replace the FrameLayout with new Fragment
+//        fragmentTransaction.replace(R.id.button_frame, fragment);
+//        fragmentTransaction.commit(); // save the changes
+//    }
 }

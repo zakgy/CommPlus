@@ -6,37 +6,52 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Stack;
+import java.util.Vector;
+
 public class MainActivity extends AppCompatActivity {
-    String SENTENCE = "";
+    Vector<String> SENTENCE = new Vector<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Begin the transaction
+        // Load fragment0, the tree root
         FragmentTransaction ft = getFragmentManager().beginTransaction();
-        // Add the contents of the container with the new fragment
-        ft.add(R.id.fragment_container, new fragment0());
-        // Complete the changes added above
+        ft.add(R.id.fragment_container, new gen_fragment0());
+        ft.commit();
+
+        // Load quick buttons fragment
+        ft = getFragmentManager().beginTransaction();
+        ft.add(R.id.quick_buttons, new QuickButtons());
         ft.commit();
     }
 
     // Concatenates new_word to the end of SENTENCE, then sets sentence_bar to SENTENCE
     // Called by onClick from all fragment buttons
-    void update_sentence_bar(String new_word) {
-        if (!SENTENCE.equals("")) {
-            SENTENCE += " --> ";
+    void sentence_bar_write() {
+        String sentence = "";
+        for (int i = 0; i < SENTENCE.size(); i++) {
+            sentence += SENTENCE.get(i);
+            if (i != SENTENCE.size() - 1) {
+                sentence += "-->";
+            }
         }
-        SENTENCE += new_word;
         TextView sentence_bar = (TextView) findViewById(R.id.sentence_bar);
-        sentence_bar.setText(SENTENCE);
+        sentence_bar.setText(sentence);
+    }
+
+    void sentence_bar_add(String new_word) {
+        SENTENCE.add(new_word);
+    }
+
+    void sentence_bar_delete() {
+        SENTENCE.remove(SENTENCE.size()-1);
     }
 
     // Sets SENTENCE to "", then sets sentence_bar to SENTENCE
-    void clear_sentence_bar() {
-        SENTENCE = "";
-        TextView sentence_bar = (TextView) findViewById(R.id.sentence_bar);
-        sentence_bar.setText(SENTENCE);
+    void sentence_bar_clear() {
+        SENTENCE.clear();
     }
 }

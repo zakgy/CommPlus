@@ -3,10 +3,11 @@ from collections import defaultdict
 MAX_CHILDREN = 6
 CSV_COLUMNS = ['Parent', 'Child 1', 'Child 2',	'Child 3', 'Child 4', 'Child 5', 'Child 6']
 HASH_OUTPUT_COLUMNS = ['ID', 'Name']
+IMAGE_PARSING_COLUMNS = ['Word Name', 'Icon File Name'];
 
 def CSVtoHash(newHash):
 
-    if newHash == True:
+    if newHash == 1:
         filename = 'Tree.csv'
         with open(filename) as csvfile:
             reader = csv.DictReader(csvfile)
@@ -19,6 +20,13 @@ def CSVtoHash(newHash):
                 for j in range(MAX_CHILDREN):
                     hash[childIds[j]] = row[CSV_COLUMNS[j + 1]]
                 i = i + 1
+    elif newHash == 2:
+        filename = 'ImageParsing.csv'
+        with open(filename) as csvfile:
+            reader = csv.DictReader(csvfile)
+            hash = {}
+            for row in reader:
+                hash[row[IMAGE_PARSING_COLUMNS[0]]] = row[IMAGE_PARSING_COLUMNS[1]]
     else:
         filename = 'Hash.csv'
         with open(filename) as csvfile:
@@ -63,6 +71,7 @@ def main():
     HashtoCSV("Hash.csv", hash)
     words = getUniqueWords(hash)
     HashtoCSV("Unique_Words.csv", words)
+    images = CSVtoHash(2)
     return
 
 if __name__ == '__main__':

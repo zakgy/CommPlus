@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">"Comm Plus"</string>
-    <string name="default_sentence">"Sentence"</string>
+    <string name="default_sentence">""</string>
+    <string name="main_buttons_title">"Main Buttons"</string>
+    <string name="quick_buttons_title">"Quick Access"</string>
 </resources>

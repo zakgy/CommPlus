@@ -49,7 +49,8 @@ def create_xml (tree, images, parent):
             text += '\n\t\t\tandroid:layout_height="match_parent"';
             text += '\n\t\t\tandroid:layout_weight="1"';
             text += '\n\t\t\tandroid:scaleType="fitCenter"';
-            text += '\n\t\t\tandroid:text="' + tree[child] + '"'
+            text += '\n\t\t\tandroid:text="' + tree[child] + '"';
+            text += '\n\t\t\tandroid:textSize="20sp"';
             text += '\n\t\t\tandroid:drawableTop="@drawable/' + findImage(images, tree[child]) + '"';
             text += '/>\n';
 
@@ -87,7 +88,7 @@ def create_java (tree, images, parent):
     text += '\n\t\tfloat SCALE_FACTOR = 100;';
     text += '\n\t\tDisplayMetrics dm = new DisplayMetrics();';
     text += '\n\t\t((MainActivity)getActivity()).getWindowManager().getDefaultDisplay().getMetrics(dm);';
-    text += '\n\t\tfloat densityScale = dm.density;';
+    text += '\n\t\tfloat densityScale = dm.scaledDensity;';
     text += '\n\t\tfloat scaledWidth = SCALE_FACTOR * densityScale;';
     text += '\n\t\tfloat scaledHeight = SCALE_FACTOR * densityScale;';
     text += '\n\t\tDrawable dr;';

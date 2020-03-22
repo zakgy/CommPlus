@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < SENTENCE.size(); i++) {
             sentence += SENTENCE.get(i);
             if (i != SENTENCE.size() - 1) {
-                sentence += "-->";
+                sentence += "\u2192";
             }
         }
         TextView sentence_bar = (TextView) findViewById(R.id.sentence_bar);

@@ -3,6 +3,7 @@ package com.example.commplus;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -11,6 +12,7 @@ import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 
 
@@ -20,7 +22,9 @@ import android.widget.Button;
 public class QuickButtons extends Fragment {
     View view;
     Button button_back;
+    Button button_top;
     Button button_reset;
+    Button button_keyboard;
 
     public QuickButtons() {
         // Required empty public constructor
@@ -44,6 +48,17 @@ public class QuickButtons extends Fragment {
             }
         });
 
+        button_top = (Button) view.findViewById(R.id.button_top);
+        button_top.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                MainActivity main_activity = (MainActivity) getActivity();
+                FragmentManager fm = getFragmentManager();
+                for(int i = 0; i < fm.getBackStackEntryCount(); i++) {
+                    fm.popBackStack();
+                }
+            }
+        });
+
         button_reset = (Button) view.findViewById(R.id.button_reset);
         button_reset.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -54,6 +69,15 @@ public class QuickButtons extends Fragment {
                 for(int i = 0; i < fm.getBackStackEntryCount(); i++) {
                     fm.popBackStack();
                 }
+            }
+        });
+
+        button_keyboard = (Button) view.findViewById(R.id.button_keyboard);
+        button_keyboard.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                MainActivity main_activity = (MainActivity) getActivity();
+                InputMethodManager imm = (InputMethodManager) main_activity.getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
             }
         });
 
